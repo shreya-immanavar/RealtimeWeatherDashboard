@@ -2,40 +2,60 @@
 
 ## Project Overview
 
-The Real-Time Weather Analytics Dashboard is a data analytics application that collects, processes, analyzes, and visualizes live weather data using the OpenWeatherMap API.
+The Real-Time Weather Analytics Dashboard is an interactive data analytics application that collects, processes, analyzes, and visualizes live weather information using the OpenWeatherMap API.
 
-The project demonstrates the complete data analytics workflow, including API integration, data cleaning, data validation, KPI generation, interactive visualization, filtering, and data export. It is built using Python, Streamlit, and Pandas to provide real-time weather monitoring through a user-friendly dashboard.
+The project demonstrates an end-to-end data analytics workflow including:
+
+- Data collection from an external API
+- Data cleaning and validation
+- Missing value handling
+- Duplicate removal
+- Historical data storage
+- KPI generation
+- Interactive visualizations
+- Data filtering
+- CSV and Excel export
+
+The dashboard is built using Python, Streamlit, and Pandas to provide real-time weather monitoring with an intuitive user interface.
+
+---
 
 ## Live Demo
 
 https://realtime-weather-dashboard.streamlit.app/
 
+---
+
 ## GitHub Repository
 
 https://github.com/shreya-immanavar/RealtimeWeatherDashboard
 
+---
+
 ## Features
 
-- Fetches live weather data using the OpenWeatherMap API.
-- Automatically refreshes weather information every 60 seconds.
-- Cleans and validates incoming weather data.
-- Prevents missing values and duplicate records.
-- Displays real-time weather metrics including:
+- Fetches live weather data using the OpenWeatherMap API
+- Automatically refreshes weather information every 60 seconds
+- Cleans and validates incoming weather data
+- Prevents missing values and duplicate records
+- Stores historical weather observations locally
+- Displays live weather metrics including:
   - Temperature
   - Feels Like Temperature
   - Humidity
   - Wind Speed
   - Atmospheric Pressure
   - Visibility
-- Provides weather alerts for extreme weather conditions.
-- Generates analytical insights from collected weather data.
-- Allows filtering by:
+- Generates weather alerts for extreme conditions
+- Produces analytical insights from collected data
+- Interactive filtering by:
   - City
   - Date Range
   - Weather Condition
-- Visualizes weather data through interactive charts.
-- Maintains historical weather records.
-- Supports CSV and Excel data export.
+- Interactive charts for weather analysis
+- Export processed data as CSV or Excel
+
+---
 
 ## Technologies Used
 
@@ -46,11 +66,13 @@ https://github.com/shreya-immanavar/RealtimeWeatherDashboard
 - OpenWeatherMap API
 - OpenPyXL
 
-## Dashboard Components
+---
 
-### Current Weather Dashboard
+## Dashboard Modules
 
-Displays live weather information including:
+### 1. Current Weather
+
+Displays real-time weather information including:
 
 - Temperature
 - Feels Like Temperature
@@ -58,11 +80,13 @@ Displays live weather information including:
 - Wind Speed
 - Pressure
 - Visibility
-- Current Weather Condition
+- Weather Condition
 
-### Analytics Dashboard
+---
 
-Provides:
+### 2. Analytics Dashboard
+
+Shows summary statistics such as:
 
 - Average Temperature
 - Maximum Temperature
@@ -72,7 +96,9 @@ Provides:
 - Average Pressure
 - Most Frequent Weather Condition
 
-### Visualizations
+---
+
+### 3. Weather Visualizations
 
 The dashboard includes:
 
@@ -82,7 +108,9 @@ The dashboard includes:
 - Weather Condition Distribution
 - Daily Temperature Summary
 
-### Smart Insights
+---
+
+### 4. Smart Insights
 
 Automatically generates insights based on collected weather data, including:
 
@@ -91,7 +119,9 @@ Automatically generates insights based on collected weather data, including:
 - Dominant weather condition
 - Weather alerts
 
-### Data Management
+---
+
+### 5. Data Management
 
 - Automatic data cleaning
 - Missing value prevention
@@ -100,9 +130,11 @@ Automatically generates insights based on collected weather data, including:
 - CSV Export
 - Excel Export
 
+---
+
 ## Project Structure
 
-```
+```text
 RealTimeWeatherDashboard/
 │
 ├── app.py
@@ -113,6 +145,8 @@ RealTimeWeatherDashboard/
 └── screenshots/
 ```
 
+---
+
 ## Installation
 
 ### Clone the Repository
@@ -121,7 +155,7 @@ RealTimeWeatherDashboard/
 git clone https://github.com/shreya-immanavar/RealtimeWeatherDashboard.git
 ```
 
-### Navigate to the Project Directory
+### Navigate to the Project Folder
 
 ```bash
 cd RealtimeWeatherDashboard
@@ -139,7 +173,9 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The application will open automatically in your browser.
+The application will open automatically in your default web browser.
+
+---
 
 ## API Configuration
 
@@ -155,11 +191,41 @@ Replace the API key in the application:
 API_KEY = "YOUR_API_KEY"
 ```
 
-For deployment, it is recommended to store the API key securely using Streamlit Secrets instead of hardcoding it.
+For production deployment, it is recommended to store the API key securely using Streamlit Secrets instead of hardcoding it.
+
+---
+
+## Data Storage
+
+The application stores weather records in a local CSV file named:
+
+```
+weather_data.csv
+```
+
+Each record contains:
+
+- Timestamp
+- City
+- Temperature
+- Feels Like Temperature
+- Humidity
+- Pressure
+- Wind Speed
+- Visibility
+- Weather Condition
+
+The application automatically:
+
+- Removes duplicate records
+- Prevents missing values
+- Updates the historical dataset after every successful API request
+
+---
 
 ## Screenshots
 
-Add screenshots of the following sections:
+Add screenshots of:
 
 - Home Dashboard
 - Current Weather Metrics
@@ -170,23 +236,25 @@ Add screenshots of the following sections:
 
 Store the images inside the `screenshots` folder.
 
+---
+
 ## Future Enhancements
 
-- Database integration using SQLite or PostgreSQL
-- Machine Learning-based weather prediction
-- Multi-city weather comparison
+- SQLite or PostgreSQL database integration
+- Machine Learning-based weather forecasting
+- Multi-city comparison dashboard
 - Interactive weather maps
 - User authentication
-- Weather notification system
+- Notification system
 - Cloud database integration
-- Advanced analytics dashboard
+- Advanced predictive analytics
+
+---
 
 ## Author
 
-Shreya Immanavar
+**Shreya Immanavar**
 
-GitHub:
-https://github.com/shreya-immanavar
+GitHub: https://github.com/shreya-immanavar
 
-Live Application:
-https://realtime-weather-dashboard.streamlit.app/
+Live Application: https://realtime-weather-dashboard.streamlit.app/
